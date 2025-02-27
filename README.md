@@ -1,3 +1,165 @@
-# Projeto de Inteligência Artificial o	Principais resultados - 
-#### Criação de uma IA capaz de prever a nota de crédito de clientes de uma financeira com 80% de precisão baseado nas características dos clientes
-#### PYTHON IA •	Inteligência Artificial •	Projeto Completo de Previsão •	Ciência de Dados •	Criação e Análise de Modelos
+
+## 🚀 Python AI Project: Artificial Intelligence and Predictions
+
+### 📌 Description
+- This project utilizes Artificial Intelligence to analyze customer data and predict their credit score. Based on customer information, a machine learning model classifies the score as Bad, Ok, or Good.
+
+_______
+
+### 🏦 Case Study: Customer Credit Score
+- A bank has hired our solution to develop a model that automates credit analysis. To achieve this, we use machine learning and classification models.
+- 
+ ### 🔗 Class Files: [Project](https://github.com/ludiemert/IA_predictions_Python)
+________________________________________
+### 🛠 Technologies Used
+- Python 🐍
+- Pandas (for data manipulation)
+- Scikit-Learn (for machine learning)
+- RandomForestClassifier (decision tree model)
+- KNeighborsClassifier (KNN - K-Nearest Neighbors model)
+________________________________________
+
+### 📊 Project Steps
+
+#### 1️⃣ Importing and Analyzing Data
+ - We load customer data from a CSV file and analyze the dataset structure to check for missing values or incorrect formats.
+ - python
+ - CopiarEditar
+ - import pandas as pd
+ - tabela = pd.read_csv("clientes.csv")
+ - display(tabela)
+ - print(tabela.info())
+   
+#### 2️⃣ Data Processing
+ - Converting categorical data into numerical values using LabelEncoder:
+ - python
+ - CopiarEditar
+ - from sklearn.preprocessing import LabelEncoder  
+
+```hash
+codificador = LabelEncoder()  
+for coluna in tabela.columns:  
+    if tabela[coluna].dtype == "object" and coluna != "score_credito":  
+        tabela[coluna] = codificador.fit_transform(tabela[coluna])
+```
+
+#### 3️⃣ Defining Features and Labels
+ - Selecting the columns used to predict the credit score:
+ - python
+   
+```hash
+x = tabela.drop(["score_credito", "id_cliente"], axis=1)  
+y = tabela["score_credito"]
+```
+
+#### 4️⃣ Splitting Data into Training and Testing Sets
+Separating data into 70% training and 30% testing:
+python
+CopiarEditar
+from sklearn.model_selection import train_test_split  
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)  
+
+#### 5️⃣ Training the Models
+We use two models: Decision Tree (RandomForestClassifier) and KNN (KNeighborsClassifier):
+python
+CopiarEditar
+from sklearn.ensemble import RandomForestClassifier  
+from sklearn.neighbors import KNeighborsClassifier  
+
+model_tree = RandomForestClassifier()  
+model_knn = KNeighborsClassifier()  
+model_tree.fit(x_train, y_train)  
+model_knn.fit(x_train, y_train) 
+
+
+#### 6️⃣ Evaluating Accuracy
+Comparing the model predictions with actual values:
+python
+CopiarEditar
+from sklearn.metrics import accuracy_score  
+
+prediction_tree = model_tree.predict(x_test)  
+prediction_knn = model_knn.predict(x_test.to_numpy())  
+
+print(accuracy_score(y_test, prediction_tree))  
+print(accuracy_score(y_test, prediction_knn))  
+
+#### 7️⃣ Making New Predictions
+Applying the trained model to predict new customers’ credit scores:
+python
+CopiarEditar
+new_clients = pd.read_csv("novos_clientes.csv")  
+
+for coluna in new_clients.columns:  
+    if new_clients[coluna].dtype == "object" and coluna != "score_credito":  
+        new_clients[coluna] = codificador.fit_transform(new_clients[coluna])  
+
+predictions = model_tree.predict(new_clients)  
+print(predictions)  
+________________________________________
+
+#### 📊 Step-by-Step Code Explanation
+1.	Importing and Analyzing Data:
+o	The script begins by importing the clientes.csv dataset using pandas.
+o	A check is performed to identify missing values or incorrect formats.
+2.	Data Preprocessing:
+o	The LabelEncoder class from sklearn is used to convert text columns into numerical values.
+o	The score_credito column is not transformed because it is the target variable.
+3.	Feature Selection:
+o	We define the features (x) for training and the target (y) for prediction.
+o	The id_cliente column is removed as it does not contribute to predictions.
+4.	Data Splitting:
+o	The dataset is split into training and test sets using train_test_split.
+5.	Training the Models:
+o	Two models are trained: RandomForestClassifier (Decision Tree) and KNeighborsClassifier (KNN - Nearest Neighbors).
+o	Both models are trained using the training data.
+6.	Model Evaluation:
+o	The accuracy of the models is calculated by comparing predictions with the test data.
+o	The accuracy is compared with a baseline prediction where everything is classified as "Standard" to assess model effectiveness.
+7.	New Data Predictions:
+o	The trained model is applied to new data (novos_clientes.csv) to predict customers' credit scores.
+
+________________________________________
+#### 📊 Results
+The RandomForestClassifier model achieved an accuracy of X%, while the KNeighborsClassifier model achieved an accuracy of Y%. Both models outperformed the baseline classification of "Standard," demonstrating their effectiveness in predicting credit scores.
+________________________________________
+#### 🚀 Running the Project
+1.	Clone the repository:
+``` bash
+git clone[ https://github.com/your-repo/python-ai-credit-score.git ](https://github.com/ludiemert/IA_predictions_Python) 
+cd python-ai-credit-score  
+```
+2.	Install dependencies:
+Make sure you have the necessary libraries installed:
+```bash
+CopiarEditar
+pip install pandas scikit-learn
+```
+3.	Run the script:
+Execute the Python script to train the model and make predictions:
+```bash
+CopiarEditar
+python main.py
+```
+________________________________________
+#### 📂 Project Structure
+```hash
+python-ai-project/  
+├── clientes.csv  
+├── novos_clientes.csv  
+├── main.py  
+└── README.md
+```
+________________________________________
+#### 📈 Key Takeaways
+•	🚀 Models trained using real customer data
+•	🎯 High accuracy in credit score predictions
+•	🔍 Automated credit evaluation process
+________________________________________
+#### 🤝 Contributing
+If you would like to contribute to this project, feel free to open an issue or submit a pull request! 🚀
+________________________________________
+#### 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+👩💻 Developed with 💙 by [Your Name]
