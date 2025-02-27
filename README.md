@@ -82,12 +82,30 @@ ________________________________________
     <table>
         <tr>
             <td style="width: 50%; text-align: center;">
-                <img src="img_proj/5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object.png" style="width: 90%;" alt="5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object">
-                <p style="margin-top: 5px;">5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object</p>
+                <img src="img_proj/Passo 4 - arvore de decisao.png" style="width: 90%;" alt="Passo 4 - arvore de decisao">
+                <p style="margin-top: 5px;">Passo 4 - arvore de decisao</p>
             </td>
             <td style="width: 50%; text-align: center;">
                 <img src="img_proj/5 - step 5 - profissao transf cod.png" style="width: 90%;" alt="5 - step 5 - profissao transf cod">
                 <p style="margin-top: 5px;">5 - step 5 - profissao transf cod</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+   <div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/5 - tabela de novos clientes - step 5 - profissao nome.png" style="width: 90%;" alt="5 - tabela de novos clientes - step 5 - profissao nome">
+                <p style="margin-top: 5px;">5 - tabela de novos clientes - step 5 - profissao nome</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/Passo 4 - arvore de decisao.png" style="width: 90%;" alt="Passo 4 - arvore de decisao">
+                <p style="margin-top: 5px;">Passo 4 - arvore de decisao</p>
             </td>
         </tr>
     </table>
