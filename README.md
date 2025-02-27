@@ -19,6 +19,84 @@ ________________________________________
 - KNeighborsClassifier (KNN - K-Nearest Neighbors model)
 ________________________________________
 
+<h4 align="center">IA_predictions_Python 🚀</h4>
+
+<div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/01_1_codg de treino_com as variaveis.png" style="width: 90%;" alt="01_1_codg de treino_com as variaveis">
+                <p style="margin-top: 5px;">01_1_codg de treino_com as variaveis.png</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/01_codg de treino_x_y.png" style="width: 90%;" alt="01_codg de treino_x_y">
+                <p style="margin-top: 5px;">01_codg de treino_x_y</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
+<div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/X e Y.png" style="width: 90%;" alt="X e Y">
+                <p style="margin-top: 5px;">X e Y</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/x_y treino e teste.png" style="width: 90%;" alt="x_y treino e teste">
+                <p style="margin-top: 5px;">x_y treino e teste</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
+  <div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/4 - acuracia de x y.png" style="width: 90%;" alt="4 - acuracia de x y">
+                <p style="margin-top: 5px;">4 - acuracia de x y</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/4 Passo - vizinho mais proximo.png" style="width: 90%;" alt="4 Passo - vizinho mais proximo">
+                <p style="margin-top: 5px;">4 Passo - vizinho mais proximo</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
+  <div align="center">
+    <table>
+        <tr>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object.png" style="width: 90%;" alt="5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object">
+                <p style="margin-top: 5px;">5 - novas previsoes com clientes novos_array - 'Poor', 'Poor', 'Standard'], dtype=object</p>
+            </td>
+            <td style="width: 50%; text-align: center;">
+                <img src="img_proj/5 - step 5 - profissao transf cod.png" style="width: 90%;" alt="5 - step 5 - profissao transf cod">
+                <p style="margin-top: 5px;">5 - step 5 - profissao transf cod</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+  <br/>
+  <br/>
+
+
 ### 📊 Project Steps
 
 #### 1️⃣ Importing and Analyzing Data
