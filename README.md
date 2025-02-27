@@ -154,6 +154,49 @@ python-ai-project/
 └── README.md
 ```
 ________________________________________
+### Portugues
+
+#### 📌 Descrição
+- Este projeto utiliza Inteligência Artificial para analisar dados de clientes e prever o score de crédito deles. Com base nas informações do cliente, um modelo de machine learning classifica o score como Ruim, Ok ou Bom.
+#### 🏦 Case: Score de Crédito dos Clientes
+- Um banco contratou nossa solução para desenvolver um modelo que automatize a análise de crédito. Para isso, utilizamos aprendizado de máquina e modelos de classificação.
+
+________________________________________
+
+
+### Passo a Passo do Código
+
+1. **Importação e Análise dos Dados**:
+   - O código começa importando a base de dados `clientes.csv` usando a biblioteca `pandas`.
+   - Em seguida, é feita uma verificação para identificar valores vazios ou formatos incorretos.
+
+2. **Pré-processamento dos Dados**:
+   - Utilizamos a classe `LabelEncoder` da biblioteca `sklearn` para transformar colunas de texto em números. Isso é necessário porque modelos de machine learning trabalham melhor com dados numéricos.
+   - A coluna `score_credito` não é transformada, pois é o nosso alvo (target).
+
+3. **Seleção de Features e Target**:
+   - Definimos as colunas que serão usadas para treinar o modelo (`x`) e a coluna que queremos prever (`y`).
+   - A coluna `id_cliente` é removida, pois não contribui para a previsão.
+
+4. **Divisão dos Dados**:
+   - Os dados são divididos em conjuntos de treino e teste usando a função `train_test_split`.
+
+5. **Treinamento dos Modelos**:
+   - Dois modelos são treinados: **RandomForestClassifier** (árvore de decisão) e **KNeighborsClassifier** (KNN - vizinhos mais próximos).
+   - Ambos os modelos são treinados com os dados de treino.
+
+6. **Avaliação dos Modelos**:
+   - A acurácia dos modelos é calculada comparando as previsões com os dados de teste.
+   - A acurácia é comparada com um "chute" de tudo como "Standard" para avaliar a eficácia do modelo.
+
+7. **Previsões em Novos Dados**:
+   - O modelo é então aplicado a novos dados (`novos_clientes.csv`) para prever o score de crédito de novos clientes.
+
+## 📊 Resultados
+
+O modelo de **RandomForestClassifier** apresentou uma acurácia de **X%**, enquanto o modelo de **KNeighborsClassifier** obteve uma acurácia de **Y%**. Ambos os modelos superaram o "chute" de tudo como "Standard", demonstrando que são eficazes na previsão do score de crédito.
+________________________________________
+
 #### 📈 Key Takeaways
 •	🚀 Models trained using real customer data
 •	🎯 High accuracy in credit score predictions
