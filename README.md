@@ -8,7 +8,7 @@ _______
 
 ### 🏦 Case Study: Customer Credit Score
 - A bank has hired our solution to develop a model that automates credit analysis. To achieve this, we use machine learning and classification models.
-- 
+  
  ### 🔗 Class Files: [Project](https://github.com/ludiemert/IA_predictions_Python)
 ________________________________________
 ### 🛠 Technologies Used
@@ -54,29 +54,30 @@ y = tabela["score_credito"]
 
 #### 4️⃣ Splitting Data into Training and Testing Sets
 Separating data into 70% training and 30% testing:
-python
-CopiarEditar
-from sklearn.model_selection import train_test_split  
+```hash
+from sklearn.model_selection import train_test_split
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)  
+```
 
 #### 5️⃣ Training the Models
 We use two models: Decision Tree (RandomForestClassifier) and KNN (KNeighborsClassifier):
-python
-CopiarEditar
+
+```hash
 from sklearn.ensemble import RandomForestClassifier  
 from sklearn.neighbors import KNeighborsClassifier  
 
 model_tree = RandomForestClassifier()  
 model_knn = KNeighborsClassifier()  
 model_tree.fit(x_train, y_train)  
-model_knn.fit(x_train, y_train) 
+model_knn.fit(x_train, y_train)
+
+```
 
 
 #### 6️⃣ Evaluating Accuracy
 Comparing the model predictions with actual values:
-python
-CopiarEditar
+```hash
 from sklearn.metrics import accuracy_score  
 
 prediction_tree = model_tree.predict(x_test)  
@@ -84,11 +85,11 @@ prediction_knn = model_knn.predict(x_test.to_numpy())
 
 print(accuracy_score(y_test, prediction_tree))  
 print(accuracy_score(y_test, prediction_knn))  
+```
 
 #### 7️⃣ Making New Predictions
 Applying the trained model to predict new customers’ credit scores:
-python
-CopiarEditar
+```hash
 new_clients = pd.read_csv("novos_clientes.csv")  
 
 for coluna in new_clients.columns:  
@@ -96,7 +97,8 @@ for coluna in new_clients.columns:
         new_clients[coluna] = codificador.fit_transform(new_clients[coluna])  
 
 predictions = model_tree.predict(new_clients)  
-print(predictions)  
+print(predictions)
+```
 ________________________________________
 
 #### 📊 Step-by-Step Code Explanation
@@ -162,4 +164,4 @@ If you would like to contribute to this project, feel free to open an issue or s
 ________________________________________
 #### 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-👩💻 Developed with 💙 by [Your Name]
+👩💻 Developed with 💙 by [[LuDiemert](https://www.linkedin.com/in/lucianadiemert/)]
